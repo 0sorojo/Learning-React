@@ -1,6 +1,6 @@
 import React from "react";
 
-const TodoItem = () => {
+const TodoItem = (props) => {
   let styles = {
     display: "flex",
     alignItems: "center",
@@ -14,8 +14,12 @@ const TodoItem = () => {
 
   return (
     <div style={styles}>
-      <input style={{ marginRight: "10px" }} type="checkbox"></input>
-      <p>place holder for todos</p>
+      <input
+        style={{ marginRight: "10px" }}
+        type="checkbox"
+        checked={props.todo.completed}
+      ></input>
+      <p>{props.todo.task}</p>
     </div>
   );
 };

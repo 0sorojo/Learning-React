@@ -3,7 +3,9 @@ import Card from "./Card";
 import cardData from "../data/CardData";
 
 const CardContainer = () => {
-  const cardComponents = cardData.map((card) => <Card key card={card} />);
+  const cardComponents = cardData.map((card) => (
+    <Card key={card.id} card={card} />
+  ));
 
   return (
     <div

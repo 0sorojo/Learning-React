@@ -1,17 +1,14 @@
 import React from "react";
 import "../index.css";
 import TodoItem from "./TodoItem";
+import todosData from "../data/todosData";
 
 const Todo = () => {
-  return (
-    <div className="todo-container">
-      <TodoItem />
-      <TodoItem />
-      <TodoItem />
-      <TodoItem />
-      <TodoItem />
-    </div>
-  );
+  const todoComponents = todosData.map((todo) => (
+    <TodoItem key={todo.id} todo={todo} />
+  ));
+
+  return <div className="todo-container">{todoComponents}</div>;
 };
 
 export default Todo;
