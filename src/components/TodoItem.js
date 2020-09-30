@@ -18,6 +18,7 @@ const TodoItem = (props) => {
         style={{ marginRight: "10px" }}
         type="checkbox"
         checked={props.todo.completed}
+        onChange={() => props.handleChange(props.todo.id)}
       ></input>
       <p>{props.todo.task}</p>
     </div>
