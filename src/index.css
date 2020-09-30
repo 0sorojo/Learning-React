@@ -18,9 +18,15 @@ code {
   margin-bottom: 15px;
 }
 
-.header-image {
+.image-container {
   flex: 1;
   margin: 5px;
+}
+
+.header-image {
+  width: 120px;
+  display: flex;
+  justify-content: center;
 }
 
 .list {
@@ -29,7 +35,7 @@ code {
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  flex: 3;
+  flex: 1;
   padding: 5px;
 }
 
@@ -50,4 +56,9 @@ code {
     0 10px 1px -4px rgba(0, 0, 0, 0.15);
   padding: 20px;
   margin-bottom: 20px;
+}
+
+.button {
+  padding: 10px;
+  border-radius: 5px;
 }
