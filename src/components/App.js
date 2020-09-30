@@ -5,18 +5,22 @@ import Header from "./Header";
 import Todo from "./Todo";
 import Time from "./Time";
 import CardContainer from "./CardContainer";
+import StateContainer from "./StateContainer";
 
-const App = () => {
-  return (
-    <section>
-      <Header />
-      <MyInfo />
-      <Time />
-      <Todo />
-      <CardContainer />
-      <Footer />
-    </section>
-  );
-};
+class App extends React.Component {
+  render() {
+    return (
+      <section>
+        <Header />
+        <MyInfo />
+        <StateContainer />
+        <Time />
+        <Todo />
+        <CardContainer />
+        <Footer />
+      </section>
+    );
+  }
+}
 
 export default App;
