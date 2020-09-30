@@ -26,6 +26,7 @@ class EventStarter extends Component {
     return (
       <div>
         <img
+          alt="gif"
           onMouseOver={this.handleClick}
           src="https://media.giphy.com/media/WQaHrd6Z3038DofLRl/giphy.gif"
         />

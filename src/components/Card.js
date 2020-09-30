@@ -14,7 +14,7 @@ const Card = (props) => {
   return (
     <div style={cardStyles}>
       <h2>{props.card.name}</h2>
-      <img src={props.card.imgUrl} />
+      <img alt="cards" src={props.card.imgUrl} />
       <h3>{props.card.artist}</h3>
       <p>{props.card.flavorText}</p>
     </div>

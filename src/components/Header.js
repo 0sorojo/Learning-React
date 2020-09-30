@@ -5,7 +5,7 @@ class Header extends React.Component {
   render() {
     return (
       <header className="header">
-        <img className="header-image" />
+        <img alt="the Logo" className="header-image" />
         <ul className="list">
           <li className="header-item">link 1</li>
           <li className="header-item">link 2</li>
