@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import EventStarter from "./EventStarter";
+import Conditional from "./Conditional";
 
 class StateContainer extends Component {
   constructor() {
@@ -7,7 +8,17 @@ class StateContainer extends Component {
     this.state = {
       title: "Changes of State",
       season: "Autumn",
+      isLoading: true,
+      unreadMessages: ["a", "b", "c"],
     };
+  }
+
+  componentDidMount() {
+    setTimeout(() => {
+      this.setState({
+        isLoading: false,
+      });
+    }, 3000);
   }
 
   render() {
@@ -19,11 +30,18 @@ class StateContainer extends Component {
           alignItems: "center",
         }}
       >
-        <div>
-          <h1>{this.state.title}</h1>
-          <h3>It's the season of {this.state.season}</h3>
-        </div>
+        {this.state.isLoading ? (
+          <h1>Loading...</h1>
+        ) : (
+          <Conditional season={this.state} />
+        )}
+
         <EventStarter />
+        <div>
+          {this.state.unreadMessages.length > 0 && (
+            <h2>You Have {this.state.unreadMessages.length} Unread Messages</h2>
+          )}
+        </div>
       </div>
     );
   }
