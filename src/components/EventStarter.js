@@ -5,21 +5,26 @@ class EventStarter extends Component {
     super();
     this.state = {
       count: 0,
-      style: {
-        padding: "5px",
-        color: "black",
-      },
+      isToggled: false,
     };
     this.handleClick = this.handleClick.bind(this);
   }
+
+  redStyle = {
+    color: "red",
+  };
+
+  blueStyle = {
+    color: "blue",
+  };
 
   handleClick = () => {
     this.setState((prevState) => {
       return {
         count: prevState.count + 1,
+        isToggled: !prevState.isToggled,
       };
     });
-    console.log(this.state);
   };
 
   render() {
@@ -33,7 +38,10 @@ class EventStarter extends Component {
         <br />
         <br />
         <div>{this.state.count}</div>
-        <button onClick={this.handleClick} style={this.state.style}>
+        <button
+          onClick={this.handleClick}
+          style={this.state.isToggled ? this.redStyle : this.blueStyle}
+        >
           Click Me
         </button>
       </div>
